@@ -1,0 +1,293 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, X, ChevronDown } from "lucide-react";
+
+// Define types for navigation items
+type SubItem = {
+  title: string;
+  href: string;
+  target?: string;
+};
+
+type NavigationItem = {
+  title: string;
+  href: string;
+  target?: string;
+  subItems: SubItem[];
+};
+
+// Navigation items data structure
+const navigationItems: NavigationItem[] = [
+  {
+    title: "Home",
+    href: "/",
+    subItems: [],
+    id: "home",
+  },
+  {
+    title: "Programs",
+    href: "#programs",
+    subItems: [],
+    id: "programs",
+  },
+  {
+    title: "Faculty & Staff",
+    href: "/faculty",
+    subItems: [],
+    id: "faculty",
+  },
+  {
+    title: "Student Corner",
+    href: "#",
+    subItems: [
+      {
+        title: "Academic Calendar",
+        href: "/student-corner#calendar",
+        id: "calendar",
+      },
+      { title: "Syllabus", href: "/student-corner#syllabus", id: "syllabus" },
+      {
+        title: "Transcripts",
+        href: "/student-corner#transcripts",
+        id: "transcripts",
+      },
+      {
+        title: "E-Governance",
+        href: "/student-corner#e-governance",
+        id: "e-governance",
+      },
+      { title: "Pay Fees", href: "/student-corner#pay-fees", id: "pay-fees" },
+      {
+        title: "Downloads",
+        href: "/student-corner#downloads",
+        id: "downloads",
+      },
+    ],
+    id: "student-corner",
+  },
+
+  {
+    title: "Alumni",
+    href: "https://alumni.charusat.ac.in/",
+    target: "_blank",
+    subItems: [],
+    id: "alumni",
+  },
+  {
+    title: "Careers",
+    href: "#careers",
+    subItems: [],
+    id: "careers",
+  },
+  {
+    title: "Admissions",
+    href: "https://admission.charusat.ac.in",
+    target: "_blank",
+    subItems: [],
+    id: "admissions",
+  },
+  {
+    title: "Contact",
+    href: "#contact",
+    subItems: [],
+    id: "contact",
+  },
+];
+
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <header className="w-full">
+      {/* Main Header */}
+      <div
+        className={`bg-white ${
+          isScrolled ? "shadow-md" : ""
+        } transition-all duration-300 sticky top-0 z-50`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
+            {/* Logo */}
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/placeholder.svg?height=60&width=60"
+                alt="CLASS Logo"
+                width={60}
+                height={60}
+                className="mr-3"
+              />
+              <div>
+                <h1 className="text-lg font-bold text-deepblue-700 leading-tight">
+                  CLASS
+                </h1>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex">
+              <ul className="flex space-x-1">
+                {navigationItems.map((item, index) => (
+                  <li key={item.id} className="nav-item relative group">
+                    <Link
+                      href={item.href}
+                      className="flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-deepblue-600 hover:bg-gray-50 rounded"
+                      target={item.target}
+                    >
+                      {item.title}
+                      {item.subItems.length > 0 && (
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                      )}
+                    </Link>
+                    {item.subItems.length > 0 && (
+                      <div className="dropdown-menu absolute invisible group-hover:visible bg-white border border-gray-200 rounded-md shadow-lg mt-0 py-0 w-48 z-50">
+                        {item.subItems.map((subItem, subIndex) => (
+                          <Link
+                            key={subItem.id}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-deepblue-50 hover:text-deepblue-600"
+                          >
+                            {subItem.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex items-center justify-between mb-6">
+                  <Link
+                    href="/"
+                    className="flex items-center"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Image
+                      src="/placeholder.svg?height=40&width=40"
+                      alt="CLASS Logo"
+                      width={40}
+                      height={40}
+                      className="mr-2"
+                    />
+                    <span className="text-lg font-bold text-deepblue-700">
+                      CLASS
+                    </span>
+                  </Link>
+                  {/* Removed redundant close button as SheetContent already provides one */}
+                </div>
+
+                {/* Mobile Navigation */}
+                <nav className="flex flex-col space-y-1">
+                  {navigationItems.map((item, index) => (
+                    <MobileNavItem
+                      key={item.id}
+                      title={item.title}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      subItems={item.subItems}
+                      target={item.target}
+                    />
+                  ))}
+                  <Button className="bg-deeppurple-700 hover:bg-deeppurple-800 mt-4">
+                    Apply Now
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+// Mobile Navigation Item Component
+const MobileNavItem = ({
+  title,
+  href,
+  onClick,
+  subItems = [],
+  target,
+}: {
+  title: string;
+  href: string;
+  onClick: () => void;
+  subItems?: SubItem[];
+  target?: string;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <div className="flex items-center justify-between">
+        <Link
+          href={href}
+          className="px-3 py-2 text-base font-medium text-gray-700 hover:text-deepblue-600 hover:bg-gray-50 rounded-md w-full"
+          onClick={subItems.length === 0 ? onClick : undefined}
+          target={target}
+        >
+          {title}
+        </Link>
+        {subItems.length > 0 && (
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 text-gray-500 hover:text-deepblue-600"
+          >
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${
+                isOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        )}
+      </div>
+      {isOpen && subItems.length > 0 && (
+        <div className="ml-4 pl-2 border-l border-gray-200 space-y-1">
+          {subItems.map((item, index) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className="block px-3 py-2 text-sm text-gray-600 hover:text-deepblue-600 hover:bg-gray-50 rounded-md"
+              onClick={onClick}
+              target={item.target}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Header;
