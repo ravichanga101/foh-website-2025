@@ -263,7 +263,7 @@ export default function FacultyPage() {
         </div>
       </section>
 
-      {/* Department Overview */}
+      {/* Department Overview Section 
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -316,7 +316,7 @@ export default function FacultyPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -351,7 +351,7 @@ export default function FacultyPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
