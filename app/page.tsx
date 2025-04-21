@@ -6,41 +6,65 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   BookOpen,
   Award,
-  ArrowRight,
   Download,
   GraduationCap,
   Target,
+  Book,
+  Users,
+  School,
 } from "lucide-react";
+import { HeroSlider } from "@/components/hero-slider";
+import { SectionTitle } from "@/components/section-title";
 
 export default function Home() {
+  const heroSlides = [
+    {
+      title: "Feather-light teaching....... Creativity at its best.....",
+      imageSrc:
+        "/images/hero-slider/Feather-light teaching....... Creativity at its best.....jpeg",
+      imageAlt: "Feather-light teaching",
+    },
+    {
+      title: "Students with 3D Models @ Art and Craft",
+      imageSrc:
+        "/images/hero-slider/Students with 3D Models @ Art and Craft.jpg",
+      imageAlt: "Students with 3D Models",
+    },
+    {
+      title: "Students in Tabla Sessions",
+      imageSrc: "/images/hero-slider/Students in Tabla Sessions.jpg",
+      imageAlt: "Students in Tabla Sessions",
+    },
+    {
+      title: "Painting..... a course leading to the ability of self-expression",
+      imageSrc:
+        "/images/hero-slider/Painting..... a course leading to the ability of self-expression.JPG",
+      imageAlt: "Painting for self-expression",
+    },
+    {
+      title:
+        "Holistic Development of Students...... Students with their Creative Models",
+      imageSrc:
+        "/images/hero-slider/Holistic Development of Students...... Students with their Creative Models.JPG",
+      imageAlt: "Students with Creative Models",
+    },
+  ];
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0 z-10 flex items-end justify-center bg-dark-800/50">
-          <div className="px-6 py-6 bg-deepblue-700/70 backdrop-blur-sm rounded-lg max-w-5xl">
-            <h1 className="text-2xl md:text-3xl font-bold text-white text-center tracking-wide leading-tight">
-              CHAROTAR INSTITUTE OF LANGUAGES, ARTS AND SOCIAL STUDIES
-            </h1>
-          </div>
-        </div>
-        <Image
-          src="images/programs/B.A..JPG?height=600&width=1600"
-          alt="CLASS Campus"
-          width={1600}
-          height={600}
-          className="w-full h-[500px] object-cover"
-        />
-      </section>
+      <HeroSlider slides={heroSlides} />
 
       {/* About Section */}
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <SectionTitle
+            title="About Faculty of Humanities"
+            subtitle="Nurturing well-rounded individuals through academic excellence and human values"
+            align="center"
+            icon={<Book className="h-6 w-6 text-deepblue-600" />}
+          />
           <div className="flex flex-col md:flex-row gap-12">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-deepblue-800 mb-6">
-                About Faculty of Humanities
-              </h2>
               <p className="text-gray-700 mb-4">
                 The Faculty of Humanities (FoH) at CHARUSAT is committed to
                 nurturing well-rounded individuals by blending academic
@@ -70,7 +94,7 @@ export default function Home() {
               </Button>
               {/* Collaborations Section within About */}
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 ">
               <Image
                 src="/images/foh-about.png"
                 alt="Faculty of Humanities"
@@ -153,6 +177,12 @@ export default function Home() {
       {/* Vision, Mission, Quality Policy Section */}
       <section id="vision" className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <SectionTitle
+            title="Our Philosophy"
+            subtitle="Guiding principles that shape our educational approach and institutional goals"
+            theme="secondary"
+            icon={<Target className="h-6 w-6 text-deeppurple-600" />}
+          />
           <Tabs defaultValue="vision" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-100">
               <TabsTrigger
@@ -257,16 +287,12 @@ export default function Home() {
       {/* Best Practices Section */}
       <section id="best-practices" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-deepblue-800 mb-4">
-              Best Practices
-            </h2>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              At FoH, we cultivate critical thinking, cultural insight, and
-              human values to shape well-rounded individuals for a dynamic and
-              responsible future.
-            </p>
-          </div>
+          <SectionTitle
+            title="Best Practices"
+            subtitle="Cultivating critical thinking, cultural insight, and human values to shape well-rounded individuals"
+            theme="accent"
+            icon={<Award className="h-6 w-6 text-amber-500" />}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="overflow-hidden border-none shadow-lg">
@@ -321,15 +347,12 @@ export default function Home() {
       {/* Collaborations Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Collaborations
-            </h2>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              We collaborate with leading institutions and organizations to
-              enhance the learning experience of our students.
-            </p>
-          </div>
+          <SectionTitle
+            title="Collaborations"
+            subtitle="We partner with leading institutions and organizations to enhance the learning experience of our students"
+            theme="primary"
+            icon={<Users className="h-6 w-6 text-deepblue-600" />}
+          />
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
@@ -374,16 +397,12 @@ export default function Home() {
       {/* Programs Preview Section */}
       <section className="py-16 bg-white" id="programs">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-deepblue-800 mb-4">
-              Academic Programs
-            </h2>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              FoH offers Ph.D., B.A. English, and B.LIS programs that nurture
-              intellect, values, and communication for impactful careers and
-              research.
-            </p>
-          </div>
+          <SectionTitle
+            title="Academic Programs"
+            subtitle="FoH offers Ph.D., B.A. English, and B.LIS programs that nurture intellect, values, and communication for impactful careers and research"
+            theme="secondary"
+            icon={<BookOpen className="h-6 w-6 text-deeppurple-600" />}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-t-4 border-t-deepblue-600 shadow-lg">
@@ -468,15 +487,12 @@ export default function Home() {
       {/* Campus Life Preview */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-deepblue-800 mb-4">
-              Campus Life
-            </h2>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              Experience a vibrant campus life at CLASS with various academic
-              and cultural activities.
-            </p>
-          </div>
+          <SectionTitle
+            title="Campus Life"
+            subtitle="Experience a vibrant campus life at CLASS with various academic and cultural activities"
+            theme="accent"
+            icon={<School className="h-6 w-6 text-amber-500" />}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="relative overflow-hidden rounded-lg h-64 shadow-lg">
