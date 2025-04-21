@@ -1,0 +1,57 @@
+import Image from "next/image";
+import { Users } from "lucide-react";
+import { SectionTitle } from "@/components/section-title";
+
+export function CollaborationsSection() {
+  return (
+    <section className="py-16">
+      <div className="container mx-auto px-4">
+        <SectionTitle
+          title="Collaborations"
+          subtitle="We partner with leading institutions and organizations to enhance the learning experience of our students"
+          theme="primary"
+          icon={<Users className="h-6 w-6 text-deepblue-600" />}
+        />
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/images/collaborations/BritishCouncil_Logo.png"
+              alt="British Council"
+              width={200}
+              height={100}
+              className="max-h-16 w-auto"
+            />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/images/collaborations/IDP-Education.jpg"
+              alt="IDP Education"
+              width={200}
+              height={100}
+              className="max-h-16 w-auto"
+            />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/images/collaborations/Disha consultants.png"
+              alt="Disha Consultants"
+              width={200}
+              height={100}
+              className="max-h-16 w-auto"
+            />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+            <Image
+              src="/images/collaborations/ets.webp"
+              alt="ETS"
+              width={200}
+              height={100}
+              className="max-h-16 w-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

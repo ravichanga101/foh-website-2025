@@ -131,17 +131,17 @@ const Header = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/placeholder.svg?height=60&width=60"
+                src="/images/class-logo.png?height=60&width=60"
                 alt="CLASS Logo"
-                width={60}
-                height={60}
+                width={120}
+                height={120}
                 className="mr-3"
               />
-              <div>
+              {/* <div>
                 <h1 className="text-lg font-bold text-deepblue-700 leading-tight">
                   CLASS
                 </h1>
-              </div>
+              </div> */}
             </Link>
 
             {/* Desktop Navigation */}

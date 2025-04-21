@@ -11,7 +11,7 @@ interface SlideItem {
 }
 
 interface HeroSliderProps {
-  slides: SlideItem[];
+  slides?: SlideItem[];
   imageWidth?: number;
   imageHeight?: number;
 }
@@ -21,6 +21,40 @@ export function HeroSlider({
   imageWidth = 1600,
   imageHeight = 600,
 }: Readonly<HeroSliderProps>) {
+  const defaultSlides = [
+    {
+      title: "Feather-light teaching....... Creativity at its best.....",
+      imageSrc:
+        "/images/hero-slider/Feather-light teaching....... Creativity at its best.....jpeg",
+      imageAlt: "Feather-light teaching",
+    },
+    {
+      title: "Students with 3D Models @ Art and Craft",
+      imageSrc:
+        "/images/hero-slider/Students with 3D Models @ Art and Craft.jpg",
+      imageAlt: "Students with 3D Models",
+    },
+    {
+      title: "Students in Tabla Sessions",
+      imageSrc: "/images/hero-slider/Students in Tabla Sessions.jpg",
+      imageAlt: "Students in Tabla Sessions",
+    },
+    {
+      title: "Painting..... a course leading to the ability of self-expression",
+      imageSrc:
+        "/images/hero-slider/Painting..... a course leading to the ability of self-expression.JPG",
+      imageAlt: "Painting for self-expression",
+    },
+    {
+      title:
+        "Holistic Development of Students...... Students with their Creative Models",
+      imageSrc:
+        "/images/hero-slider/Holistic Development of Students...... Students with their Creative Models.JPG",
+      imageAlt: "Students with Creative Models",
+    },
+  ];
+
+  const slidesToShow = slides || defaultSlides;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
   const [autoplayInterval, setAutoplayInterval] =
@@ -32,7 +66,9 @@ export function HeroSlider({
 
     setIsChanging(true);
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setCurrentIndex((prev) =>
+        prev === 0 ? slidesToShow.length - 1 : prev - 1
+      );
       setTimeout(() => setIsChanging(false), 50);
     }, 300);
   };
@@ -43,7 +79,9 @@ export function HeroSlider({
 
     setIsChanging(true);
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) =>
+        prev === slidesToShow.length - 1 ? 0 : prev + 1
+      );
       setTimeout(() => setIsChanging(false), 50);
     }, 300);
   };
@@ -75,13 +113,13 @@ export function HeroSlider({
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [slides.length]);
+  }, [slidesToShow.length]);
 
   return (
     <div className="relative w-full overflow-hidden h-[500px]">
       {/* Slider Content */}
       <div className="relative h-full w-full">
-        {slides.map((slide, index) => (
+        {slidesToShow.map((slide, index) => (
           <div
             key={`slide-${slide.title}-${index}`}
             className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
@@ -143,7 +181,7 @@ export function HeroSlider({
       {/* Slide Indicators */}
       <div className="absolute z-20 bottom-4 left-0 right-0">
         <div className="flex justify-center gap-2">
-          {slides.map((_, index) => (
+          {slidesToShow.map((_, index) => (
             <button
               key={`indicator-${index}`}
               disabled={isChanging}
