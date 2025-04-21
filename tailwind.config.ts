@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -52,6 +52,14 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Theme color palette
+        foh: {
+          peach: "#f9e7d8",
+          brown: "#7c3506",
+          navy: "#133050",
+          gray: "#949aa4",
+          beige: "#bc9c7c",
+        },
         // Custom theme colors
         deepblue: {
           50: "#e6f0ff",
@@ -100,6 +108,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

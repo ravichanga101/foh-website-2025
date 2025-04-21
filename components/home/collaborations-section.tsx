@@ -4,17 +4,17 @@ import { SectionTitle } from "@/components/section-title";
 
 export function CollaborationsSection() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-foh-beige/30">
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Collaborations"
           subtitle="We partner with leading institutions and organizations to enhance the learning experience of our students"
           theme="primary"
-          icon={<Users className="h-6 w-6 text-deepblue-600" />}
+          icon={<Users className="h-6 w-6 text-foh-brown" />}
         />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md border border-foh-peach/50">
             <Image
               src="/images/collaborations/BritishCouncil_Logo.png"
               alt="British Council"
@@ -23,7 +23,7 @@ export function CollaborationsSection() {
               className="max-h-16 w-auto"
             />
           </div>
-          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md border border-foh-peach/50">
             <Image
               src="/images/collaborations/IDP-Education.jpg"
               alt="IDP Education"
@@ -32,7 +32,7 @@ export function CollaborationsSection() {
               className="max-h-16 w-auto"
             />
           </div>
-          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md border border-foh-peach/50">
             <Image
               src="/images/collaborations/Disha consultants.png"
               alt="Disha Consultants"
@@ -41,7 +41,7 @@ export function CollaborationsSection() {
               className="max-h-16 w-auto"
             />
           </div>
-          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md">
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md border border-foh-peach/50">
             <Image
               src="/images/collaborations/ets.webp"
               alt="ETS"

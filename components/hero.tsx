@@ -17,9 +17,9 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="relative">
-      <div className="absolute inset-0 z-10 flex items-end justify-center bg-dark-800/50">
-        <div className="px-6 py-6 bg-deepblue-700/70 backdrop-blur-sm rounded-lg max-w-5xl">
-          <h1 className="text-2xl md:text-3xl font-bold text-white text-center tracking-wide leading-tight">
+      <div className="absolute inset-0 z-10 flex items-end justify-center bg-foh-navy/50">
+        <div className="px-6 py-6 bg-foh-navy/90 backdrop-blur-sm rounded-lg max-w-5xl">
+          <h1 className="text-2xl md:text-3xl font-bold text-foh-peach text-center tracking-wide leading-tight">
             {title}
           </h1>
         </div>

@@ -4,13 +4,13 @@ import { SectionTitle } from "@/components/section-title";
 
 export function CampusLifeSection() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-foh-peach/30">
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Campus Life"
           subtitle="Experience a vibrant campus life at CLASS with various academic and cultural activities"
           theme="accent"
-          icon={<School className="h-6 w-6 text-amber-500" />}
+          icon={<School className="h-6 w-6 text-foh-beige" />}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

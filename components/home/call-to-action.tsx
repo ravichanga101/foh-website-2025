@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function CallToAction() {
   return (
-    <section className="py-16 bg-gradient-to-r from-deepblue-700 to-deeppurple-700 text-white">
+    <section className="py-16 bg-gradient-to-r from-foh-navy to-foh-brown text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-6">
           Ready to Begin Your Journey?
@@ -13,11 +13,7 @@ export function CallToAction() {
           will shape your future.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-deepblue-700 hover:bg-gray-100"
-          >
+          <Button asChild size="lg" variant="beige">
             <Link href="https://admission.charusat.ac.in" target="_blank">
               Apply Now
             </Link>

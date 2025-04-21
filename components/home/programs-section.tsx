@@ -12,17 +12,17 @@ export function ProgramsSection() {
           title="Academic Programs"
           subtitle="FoH offers Ph.D., B.A. English, and B.LIS programs that nurture intellect, values, and communication for impactful careers and research"
           theme="secondary"
-          icon={<BookOpen className="h-6 w-6 text-deeppurple-600" />}
+          icon={<BookOpen className="h-6 w-6 text-foh-navy" />}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="border-t-4 border-t-deepblue-600 shadow-lg">
+          <Card className="border-t-4 border-t-foh-navy shadow-lg">
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-deepblue-100 p-2 rounded-full">
-                  <BookOpen className="h-5 w-5 text-deepblue-600" />
+                <div className="bg-foh-peach p-2 rounded-full">
+                  <BookOpen className="h-5 w-5 text-foh-navy" />
                 </div>
-                <h3 className="text-lg font-bold text-deepblue-800">
+                <h3 className="text-lg font-bold text-foh-navy">
                   Ph.D. Program
                 </h3>
               </div>
@@ -32,13 +32,13 @@ export function ProgramsSection() {
             </CardContent>
           </Card>
 
-          <Card className="border-t-4 border-t-deeppurple-600 shadow-lg">
+          <Card className="border-t-4 border-t-foh-brown shadow-lg">
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-deeppurple-100 p-2 rounded-full">
-                  <BookOpen className="h-5 w-5 text-deeppurple-600" />
+                <div className="bg-foh-peach p-2 rounded-full">
+                  <BookOpen className="h-5 w-5 text-foh-brown" />
                 </div>
-                <h3 className="text-lg font-bold text-deepblue-800">
+                <h3 className="text-lg font-bold text-foh-navy">
                   Bachelor of Arts (BA)
                 </h3>
               </div>
@@ -59,13 +59,13 @@ export function ProgramsSection() {
             </CardContent>
           </Card>
 
-          <Card className="border-t-4 border-t-deepblue-600 shadow-lg">
+          <Card className="border-t-4 border-t-foh-beige shadow-lg">
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-deepblue-100 p-2 rounded-full">
-                  <BookOpen className="h-5 w-5 text-deepblue-600" />
+                <div className="bg-foh-peach p-2 rounded-full">
+                  <BookOpen className="h-5 w-5 text-foh-beige" />
                 </div>
-                <h3 className="text-lg font-bold text-deepblue-800">
+                <h3 className="text-lg font-bold text-foh-navy">
                   Bachelor of Library and Information Science
                 </h3>
               </div>
@@ -88,7 +88,7 @@ export function ProgramsSection() {
         </div>
 
         <div className="text-center mt-8">
-          <Button asChild className="bg-deepblue-600 hover:bg-deepblue-700">
+          <Button variant="navy" asChild>
             <Link href="#">Get Details of Programs</Link>
           </Button>
         </div>

@@ -12,6 +12,7 @@ type SubItem = {
   title: string;
   href: string;
   target?: string;
+  id: string;
 };
 
 type NavigationItem = {
@@ -19,6 +20,7 @@ type NavigationItem = {
   href: string;
   target?: string;
   subItems: SubItem[];
+  id: string;
 };
 
 // Navigation items data structure
@@ -122,7 +124,7 @@ const Header = () => {
     <header className="w-full">
       {/* Main Header */}
       <div
-        className={`bg-white ${
+        className={`bg-foh-peach ${
           isScrolled ? "shadow-md" : ""
         } transition-all duration-300 sticky top-0 z-50`}
       >
@@ -147,11 +149,11 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex">
               <ul className="flex space-x-1">
-                {navigationItems.map((item, index) => (
+                {navigationItems.map((item) => (
                   <li key={item.id} className="nav-item relative group">
                     <Link
                       href={item.href}
-                      className="flex items-center px-3 py-2 text-sm font-medium text-gray-800 hover:text-deepblue-600 hover:bg-gray-50 rounded"
+                      className="flex items-center px-3 py-2 text-sm font-medium text-foh-navy hover:text-foh-brown hover:bg-foh-peach/80 rounded"
                       target={item.target}
                     >
                       {item.title}
@@ -160,12 +162,12 @@ const Header = () => {
                       )}
                     </Link>
                     {item.subItems.length > 0 && (
-                      <div className="dropdown-menu absolute invisible group-hover:visible bg-white border border-gray-200 rounded-md shadow-lg mt-0 py-0 w-48 z-50">
-                        {item.subItems.map((subItem, subIndex) => (
+                      <div className="dropdown-menu absolute invisible group-hover:visible bg-white border border-foh-beige rounded-md shadow-lg mt-0 py-0 w-48 z-50">
+                        {item.subItems.map((subItem) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-deepblue-50 hover:text-deepblue-600"
+                            className="block px-4 py-2 text-sm text-foh-navy hover:bg-foh-peach/50 hover:text-foh-brown"
                           >
                             {subItem.title}
                           </Link>
@@ -177,15 +179,25 @@ const Header = () => {
               </ul>
             </nav>
 
+            {/* Apply Now Button (Desktop) */}
+            <div className="hidden lg:block">
+              <Button variant="brown" size="lg">
+                Apply Now
+              </Button>
+            </div>
+
             {/* Mobile Menu Button */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 text-foh-navy" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent
+                side="right"
+                className="w-[300px] sm:w-[400px] bg-foh-peach"
+              >
                 <div className="flex items-center justify-between mb-6">
                   <Link
                     href="/"
@@ -193,13 +205,13 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <Image
-                      src="/placeholder.svg?height=40&width=40"
+                      src="/images/class-logo.png?height=40&width=40"
                       alt="CLASS Logo"
                       width={40}
                       height={40}
                       className="mr-2"
                     />
-                    <span className="text-lg font-bold text-deepblue-700">
+                    <span className="text-lg font-bold text-foh-navy">
                       CLASS
                     </span>
                   </Link>
@@ -208,7 +220,7 @@ const Header = () => {
 
                 {/* Mobile Navigation */}
                 <nav className="flex flex-col space-y-1">
-                  {navigationItems.map((item, index) => (
+                  {navigationItems.map((item) => (
                     <MobileNavItem
                       key={item.id}
                       title={item.title}
@@ -218,7 +230,7 @@ const Header = () => {
                       target={item.target}
                     />
                   ))}
-                  <Button className="bg-deeppurple-700 hover:bg-deeppurple-800 mt-4">
+                  <Button variant="brown" className="mt-4">
                     Apply Now
                   </Button>
                 </nav>
@@ -252,7 +264,7 @@ const MobileNavItem = ({
       <div className="flex items-center justify-between">
         <Link
           href={href}
-          className="px-3 py-2 text-base font-medium text-gray-700 hover:text-deepblue-600 hover:bg-gray-50 rounded-md w-full"
+          className="px-3 py-2 text-base font-medium text-foh-navy hover:text-foh-brown hover:bg-white/30 rounded-md w-full"
           onClick={subItems.length === 0 ? onClick : undefined}
           target={target}
         >
@@ -261,7 +273,7 @@ const MobileNavItem = ({
         {subItems.length > 0 && (
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-gray-500 hover:text-deepblue-600"
+            className="p-2 text-foh-navy hover:text-foh-brown"
           >
             <ChevronDown
               className={`h-4 w-4 transition-transform ${
@@ -272,12 +284,12 @@ const MobileNavItem = ({
         )}
       </div>
       {isOpen && subItems.length > 0 && (
-        <div className="ml-4 pl-2 border-l border-gray-200 space-y-1">
-          {subItems.map((item, index) => (
+        <div className="ml-4 pl-2 border-l border-foh-beige space-y-1">
+          {subItems.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className="block px-3 py-2 text-sm text-gray-600 hover:text-deepblue-600 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-sm text-foh-navy hover:text-foh-brown hover:bg-white/30 rounded-md"
               onClick={onClick}
               target={item.target}
             >
