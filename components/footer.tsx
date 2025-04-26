@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Facebook,
   Twitter,
@@ -7,6 +8,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  Youtube,
 } from "lucide-react";
 
 export default function Footer() {
@@ -15,8 +17,23 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
+            <div className="flex flex-col items-start space-y-4 mb-6">
+              <Image
+                src="/images/logos/charusat-logo.png"
+                alt="CHARUSAT Logo"
+                width={180}
+                height={60}
+                className="mb-2"
+              />
+              <Image
+                src="/images/logos/class-logo.png"
+                alt="CLASS Logo"
+                width={150}
+                height={50}
+              />
+            </div>
             <h3 className="text-lg font-semibold mb-4 text-foh-beige">
-              About CILASS
+              About CLASS
             </h3>
             <p className="text-gray-300 text-sm mb-4">
               The Faculty of Humanities (FoH) at CHARUSAT is committed to
@@ -24,21 +41,34 @@ export default function Footer() {
               with human values.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-foh-beige hover:text-white">
+              <Link
+                href="https://www.facebook.com/IIIM.CHARUSAT/"
+                className="text-foh-beige hover:text-white"
+              >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-foh-beige hover:text-white">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-foh-beige hover:text-white">
+
+              <Link
+                href="https://www.instagram.com/iiim.charusat/"
+                className="text-foh-beige hover:text-white"
+              >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-foh-beige hover:text-white">
+              <Link
+                href="https://www.linkedin.com/school/iiim-charusat/"
+                className="text-foh-beige hover:text-white"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link
+                href="https://www.youtube.com/@iiimcharusat"
+                className="text-foh-beige hover:text-white"
+              >
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
               </Link>
             </div>
           </div>
@@ -49,12 +79,18 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="/about"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="/programs"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   Programs
                 </Link>
               </li>
@@ -74,9 +110,21 @@ export default function Footer() {
                   Faculty
                 </Link>
               </li>
+
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
-                  Newsletter
+                <Link
+                  href="/alumni"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  Alumni
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -88,27 +136,46 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="https://charusat.edu.in:912/eGovernance/"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   e-Governance
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="https://charusat.edu.in/transcript/"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   Transcript
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="/careers"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="https://www.charusat.ac.in/Downloads/Syllabus/"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   Syllabus
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-foh-peach">
+                <Link
+                  href="https://www.charusat.ac.in/Downloads/"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
                   Downloads
                 </Link>
               </li>
@@ -147,13 +214,13 @@ export default function Footer() {
           </p>
           <div className="flex space-x-4">
             <Link
-              href="/privacy-policy"
+              href="https://charusat.ac.in/privacy-policy/"
               className="text-sm text-gray-400 hover:text-foh-peach"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms-of-service"
+              href="https://charusat.ac.in/terms-of-use/"
               className="text-sm text-gray-400 hover:text-foh-peach"
             >
               Terms of Service
