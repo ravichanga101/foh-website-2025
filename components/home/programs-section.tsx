@@ -29,6 +29,14 @@ export function ProgramsSection() {
               <p className="text-gray-700 mb-4">
                 Ph.D. Program in English, Communication and Library Science
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  UGC approved
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  ₹ 60000 / Year
+                </span>
+              </div>
             </CardContent>
           </Card>
 
@@ -85,12 +93,6 @@ export function ProgramsSection() {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        <div className="text-center mt-8">
-          <Button variant="navy" asChild>
-            <Link href="#">Get Details of Programs</Link>
-          </Button>
         </div>
       </div>
     </section>
