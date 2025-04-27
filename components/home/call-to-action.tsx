@@ -11,7 +11,7 @@ export function CallToAction() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Transform Your Future With Us
+            Shape Your Future
           </h2>
           <p className="text-lg md:text-xl mb-10 opacity-90">
             Join CLASS and discover a world of opportunities that will empower
