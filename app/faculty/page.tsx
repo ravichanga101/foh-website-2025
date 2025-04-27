@@ -204,8 +204,8 @@ export default function FacultyPage() {
                     <Image
                       src={faculty.image || "/placeholder.svg"}
                       alt={faculty.name}
-                      fill
                       className="object-cover"
+                      fill
                     />
                   </div>
                   <CardContent className="flex-1 p-6">

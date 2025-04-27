@@ -64,7 +64,7 @@ export function BestPractices() {
                   src="/images/best-practices/B.A..JPG"
                   alt="Problem Solving"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </AspectRatio>
               <div className="absolute inset-0 bg-gradient-to-t from-foh-brown/80 to-transparent flex items-end p-6">
