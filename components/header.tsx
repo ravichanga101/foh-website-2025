@@ -49,24 +49,24 @@ const navigationItems: NavigationItem[] = [
     subItems: [
       {
         title: "Academic Calendar",
-        href: "/student-corner#calendar",
+        href: "#",
         id: "calendar",
       },
-      { title: "Syllabus", href: "/student-corner#syllabus", id: "syllabus" },
+      { title: "Syllabus", href: "#", id: "syllabus" },
       {
         title: "Transcripts",
-        href: "/student-corner#transcripts",
+        href: "#",
         id: "transcripts",
       },
       {
         title: "E-Governance",
-        href: "/student-corner#e-governance",
+        href: "#",
         id: "e-governance",
       },
-      { title: "Pay Fees", href: "/student-corner#pay-fees", id: "pay-fees" },
+      { title: "Pay Fees", href: "#", id: "pay-fees" },
       {
         title: "Downloads",
-        href: "/student-corner#downloads",
+        href: "#",
         id: "downloads",
       },
     ],

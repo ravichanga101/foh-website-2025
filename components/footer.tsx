@@ -19,27 +19,22 @@ export default function Footer() {
           <div>
             <div className="flex flex-col items-start space-y-4 mb-6">
               <Image
-                src="/images/logos/charusat-logo.png"
-                alt="CHARUSAT Logo"
-                width={180}
-                height={60}
-                className="mb-2"
-              />
-              <Image
                 src="/images/logos/class-logo.png"
                 alt="CLASS Logo"
                 width={150}
                 height={50}
+                className="mb-2 bg-white rounded-md p-2"
+              />
+
+              <Image
+                src="/images/logos/charusat-logo.png"
+                alt="CHARUSAT Logo"
+                width={180}
+                height={60}
+                className="mb-2 bg-white rounded-md p-2"
               />
             </div>
-            <h3 className="text-lg font-semibold mb-4 text-foh-beige">
-              About CLASS
-            </h3>
-            <p className="text-gray-300 text-sm mb-4">
-              The Faculty of Humanities (FoH) at CHARUSAT is committed to
-              nurturing well-rounded individuals by blending academic excellence
-              with human values.
-            </p>
+
             <div className="flex space-x-4">
               <Link
                 href="https://www.facebook.com/IIIM.CHARUSAT/"

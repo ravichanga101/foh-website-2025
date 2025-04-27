@@ -129,7 +129,7 @@ export function HeroSlider({
             <div className="relative h-full w-full">
               <div className="absolute inset-0 z-10 flex items-end justify-center">
                 <div
-                  className={`px-6 py-6 mb-8 bg-foh-navy/80 rounded-lg max-w-5xl transition-all duration-700 ${
+                  className={`px-6 py-6 mb-8 bg-foh-brown/80 rounded-lg max-w-5xl transition-all duration-700 ${
                     currentIndex === index && !isChanging
                       ? "opacity-100 transform-none"
                       : "opacity-0 translate-y-4"
