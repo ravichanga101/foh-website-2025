@@ -75,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/about"
+                  href="./#about"
                   className="text-gray-300 hover:text-foh-peach"
                 >
                   About Us
@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs"
+                  href="./#programs"
                   className="text-gray-300 hover:text-foh-peach"
                 >
                   Programs
@@ -91,7 +91,8 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/admissions"
+                  href="https://admission.charusat.ac.in/"
+                  target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
                   Admissions
@@ -103,23 +104,6 @@ export default function Footer() {
                   className="text-gray-300 hover:text-foh-peach"
                 >
                   Faculty
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/alumni"
-                  className="text-gray-300 hover:text-foh-peach"
-                >
-                  Alumni
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-foh-peach"
-                >
-                  Careers
                 </Link>
               </li>
             </ul>
@@ -148,14 +132,7 @@ export default function Footer() {
                   Transcript
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-foh-peach"
-                >
-                  Careers
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="https://www.charusat.ac.in/Downloads/Syllabus/"
@@ -207,20 +184,6 @@ export default function Footer() {
             © {new Date().getFullYear()} Charotar Institute of Languages, Arts
             and Social Studies. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <Link
-              href="https://charusat.ac.in/privacy-policy/"
-              className="text-sm text-gray-400 hover:text-foh-peach"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="https://charusat.ac.in/terms-of-use/"
-              className="text-sm text-gray-400 hover:text-foh-peach"
-            >
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

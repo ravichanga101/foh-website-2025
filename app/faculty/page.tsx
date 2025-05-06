@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, BookOpen } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 const facultyMembers = [
   {
@@ -15,7 +16,7 @@ const facultyMembers = [
     specialization:
       "English Studies, communication and Indian Knowledge System",
     email: "dean.foh@charusat.ac.in",
-    image: "/images/faculties/1. Bhaskar_Sir.4b8d187e.webp",
+    image: "/images/faculties/new/1. Bhaskar_Sir.4b8d187e.png",
   },
   {
     id: 2,
@@ -27,7 +28,7 @@ const facultyMembers = [
     specialization:
       "English Language Teaching, Soft Skills, Personality Development, Professional Writing, Indian Knowledge System",
     email: "kaushiktrivedi.cs@charusat.ac.in",
-    image: "/images/faculties/2. Kaushik Rohitkumar Trivedi_2027.JPG",
+    image: "/images/faculties/new/2. Kaushik Rohitkumar Trivedi_2027.png",
   },
   {
     id: 3,
@@ -178,78 +179,78 @@ export default function FacultyPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gray-100 py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 mix-blend-multiply pointer-events-none"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Faculty & Staff
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Our Esteemed Faculty & Staff
             </h1>
-            <p className="text-lg text-gray-700">
-              Meet our distinguished faculty members who are experts in their
-              respective fields and dedicated to providing quality education and
-              guidance to our students.
+            <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+              Dedicated mentors, researchers, and educators guiding the future
+              with expertise and passion.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Faculty Members Section */}
-      <section className="py-16">
+      {/* Faculty Grid */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {facultyMembers.map((faculty) => (
-              <Card key={faculty.id} className="overflow-hidden">
-                <div className="flex flex-col h-full">
-                  <div className="relative h-64 bg-gray-200">
-                    <Image
-                      src={faculty.image || "/placeholder.svg"}
-                      alt={faculty.name}
-                      className="object-cover"
-                      fill
-                    />
+              <Card
+                key={faculty.id}
+                className="hover:shadow-xl transition-shadow duration-300 h-full"
+              >
+                <div className="flex flex-col items-center text-center p-6">
+                  <div className="flex justify-center pt-6">
+                    <div className="w-32 h-32 relative">
+                      <Image
+                        src={faculty.image || "/placeholder.svg"}
+                        alt={faculty.name}
+                        className="object-cover rounded-full border-4 border-white shadow-md"
+                        fill
+                      />
+                    </div>
                   </div>
-                  <CardContent className="flex-1 p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      {faculty.name}
-                    </h3>
-                    <p className="text-primary font-medium mb-2">
-                      {faculty.position}
-                    </p>
-                    {faculty.titles.length > 0 && (
-                      <div className="mb-3">
-                        {faculty.titles.map((title, index) => (
-                          <p key={index} className="text-sm text-gray-700">
-                            {title}
-                          </p>
-                        ))}
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {faculty.name}
+                  </h3>
+                  <p className="text-sm text-primary font-medium">
+                    {faculty.position}
+                  </p>
+                  {faculty.titles.length > 0 && (
+                    <div className="mt-2 flex flex-wrap justify-center gap-1">
+                      {faculty.titles.map((title, index) => (
+                        <span
+                          key={index}
+                          className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full"
+                        >
+                          {title}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <CardContent className="mt-4 text-sm text-gray-700 w-full flex flex-col items-center space-y-2">
+                    <div className="flex items-center justify-center gap-2">
+                      <div>{faculty.qualifications}</div>
+                    </div>
+
+                    {faculty.specialization && (
+                      <div className="flex items-center justify-center gap-2 text-center">
+                        <div>
+                          <span className="font-medium">Specialization:</span>{" "}
+                          {faculty.specialization}
+                        </div>
                       </div>
                     )}
-                    <div className="space-y-3 mb-4">
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">
-                          Qualifications:
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          {faculty.qualifications}
-                        </p>
-                      </div>
-                      {faculty.specialization && (
-                        <div>
-                          <p className="text-sm font-medium text-gray-700">
-                            Specialization:
-                          </p>
-                          <p className="text-sm text-gray-600">
-                            {faculty.specialization}
-                          </p>
-                        </div>
-                      )}
-                    </div>
+
                     {faculty.email && (
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <Mail className="h-4 w-4 text-primary" />
+                      <div className="flex items-center justify-center gap-2">
                         <a
                           href={`mailto:${faculty.email}`}
-                          className="hover:text-primary"
+                          className="text-blue-600 hover:underline text-center"
                         >
                           {faculty.email}
                         </a>
@@ -262,96 +263,6 @@ export default function FacultyPage() {
           </div>
         </div>
       </section>
-
-      {/* Department Overview Section 
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              Department Overview
-            </h2>
-            <p className="text-gray-700 mb-6">
-              The Department of Humanities and Social Sciences at CILASS is
-              committed to providing quality education in languages, arts, and
-              social studies. Our faculty members are experts in their
-              respective fields and are dedicated to nurturing well-rounded
-              individuals through academic excellence and human values.
-            </p>
-            <p className="text-gray-700 mb-6">
-              The department offers a range of programs at the undergraduate and
-              postgraduate levels, as well as research opportunities at the
-              doctoral level. Our faculty members are actively engaged in
-              research and publication in their areas of specialization.
-            </p>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Department Highlights
-              </h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Expert faculty with diverse specializations</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Active research and publication</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Innovative teaching methodologies</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Focus on holistic development of students</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>
-                    Emphasis on Indian knowledge systems and cultural values
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Contact the Department
-          </h2>
-          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-            For any inquiries related to the department or faculty, please feel
-            free to contact us.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-3xl mx-auto">
-            <div className="flex-1 bg-gray-50 p-6 rounded-lg shadow-md">
-              <div className="flex items-center justify-center mb-4">
-                <Phone className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-700 mb-2">+91-9824269101</p>
-              <p className="text-gray-700">Ext. 5184</p>
-            </div>
-            <div className="flex-1 bg-gray-50 p-6 rounded-lg shadow-md">
-              <div className="flex items-center justify-center mb-4">
-                <Mail className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-700 mb-2">
-                <a
-                  href="mailto:dean.foh@charusat.ac.in"
-                  className="hover:text-primary"
-                >
-                  dean.foh@charusat.ac.in
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

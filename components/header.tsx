@@ -47,26 +47,34 @@ const navigationItems: NavigationItem[] = [
     title: "Student Corner",
     href: "#",
     subItems: [
-      {
-        title: "Academic Calendar",
-        href: "#",
-        id: "calendar",
-      },
+      // {
+      //   title: "Academic Calendar",
+      //   href: "#",
+      //   id: "calendar",
+      // },
       { title: "Syllabus", href: "#", id: "syllabus" },
       {
         title: "Transcripts",
-        href: "#",
+        href: "https://charusat.edu.in/transcript/",
+        target: "_blank",
         id: "transcripts",
       },
       {
         title: "E-Governance",
-        href: "#",
+        href: "https://charusat.edu.in:912/eGovernance/",
+        target: "_blank",
         id: "e-governance",
       },
-      { title: "Pay Fees", href: "#", id: "pay-fees" },
+      {
+        title: "Pay Fees",
+        href: "https://support.charusat.edu.in/FeesPaymentApp/",
+        target: "_blank",
+        id: "pay-fees",
+      },
       {
         title: "Downloads",
-        href: "#",
+        href: "https://www.charusat.ac.in/Downloads/",
+        target: "_blank",
         id: "downloads",
       },
     ],
@@ -82,7 +90,8 @@ const navigationItems: NavigationItem[] = [
   },
   {
     title: "Careers",
-    href: "#careers",
+    href: "https://www.charusat.ac.in/careers",
+    target: "_blank",
     subItems: [],
     id: "careers",
   },
@@ -92,6 +101,13 @@ const navigationItems: NavigationItem[] = [
     target: "_blank",
     subItems: [],
     id: "admissions",
+  },
+  {
+    title: "News",
+    href: "/news",
+
+    subItems: [],
+    id: "news",
   },
   {
     title: "Contact",
@@ -182,7 +198,9 @@ const Header = () => {
             {/* Apply Now Button (Desktop) */}
             <div className="hidden lg:block">
               <Button variant="brown" size="lg">
-                Apply Now
+                <Link href="https://admission.charusat.ac.in" target="_blank">
+                  Apply Now
+                </Link>
               </Button>
             </div>
 
