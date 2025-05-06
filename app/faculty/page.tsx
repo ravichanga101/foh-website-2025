@@ -16,7 +16,7 @@ const facultyMembers = [
     specialization:
       "English Studies, communication and Indian Knowledge System",
     email: "dean.foh@charusat.ac.in",
-    image: "/images/faculties/new/1. Bhaskar_Sir.4b8d187e.png",
+    image: "/images/faculties/new/1. Bhaskar_Sir.4b8d187e.webp",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const facultyMembers = [
     specialization:
       "English Language Teaching, Soft Skills, Personality Development, Professional Writing, Indian Knowledge System",
     email: "kaushiktrivedi.cs@charusat.ac.in",
-    image: "/images/faculties/new/2. Kaushik Rohitkumar Trivedi_2027.png",
+    image: "/images/faculties/new/2. Kaushik Rohitkumar Trivedi_2027.webp",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const facultyMembers = [
     specialization:
       "English Language and Literature, Communication Skills, Cultural Studies, Translation Studies, Philosophy, Value and Ethics, Indian Knowledge System",
     email: "robertparmar.cs@charusat.ac.in",
-    image: "/images/faculties/3. Robert Joseph_7029.JPG",
+    image: "/images/faculties/new/3. Robert Joseph_7029.webp",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const facultyMembers = [
     specialization:
       "Applied Linguistics, Language Pedagogy, English for Specific Purposes (ESP), Technology in Language Education, Language and Communication",
     email: "vijaymakwana.cs@charusat.ac.in",
-    image: "/images/faculties/4. Vijay Mahendrabhai Makwana_2062.JPG",
+    image: "/images/faculties/new/4. Vijay Mahendrabhai Makwana_2062.webp",
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const facultyMembers = [
     specialization:
       "Psychoanalytic Criticism, Translation Studies, Comparative Literature, Feminist and Gender Studies, Evolution of the Short Story in World Literature",
     email: "kinjalbhatia.cs@charusat.ac.in",
-    image: "/images/faculties/5. Kinjal Bhatia_2114.JPG",
+    image: "/images/faculties/new/5. Kinjal Bhatia_2114.webp",
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const facultyMembers = [
     specialization:
       "English Literature (Novel, Drama and Poetry), Educational and Social Psychology",
     email: "jayshreemehta.cs@charusat.ac.in",
-    image: "/images/faculties/6. Jayshree Chirag Mehta_2088.JPG",
+    image: "/images/faculties/new/6. Jayshree Chirag Mehta_2088.webp",
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ const facultyMembers = [
     specialization:
       "Gender representation in Indian epics, Communication skills and Soft skills.",
     email: "bharatikaknani.cs@charusat.ac.in",
-    image: "/images/faculties/7. Bharati Harishkumar_2089.JPG",
+    image: "/images/faculties/new/7. Bharati Harishkumar_2089.webp",
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ const facultyMembers = [
     specialization:
       "Performing Arts, Strategies for developing spoken fluency and expression, Symbolism and narrative techniques in film",
     email: "celinedavla.cs@charusat.ac.in",
-    image: "/images/faculties/8. Celine Manu Davla_2090.JPG",
+    image: "/images/faculties/new/8. Celine Manu Davla_2090.webp",
   },
   {
     id: 9,
@@ -107,7 +107,7 @@ const facultyMembers = [
     specialization:
       "Gender Studies, Cultural Studies, Graphic Literature, Digital & Environmental Humanities, English Language and Linguistics",
     email: "pranjalbhatt.cs@charusat.ac.in",
-    image: "/images/faculties/9. Pranjal paritosh_2094.JPG",
+    image: "/images/faculties/new/9. Pranjal paritosh_2094.webp",
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ const facultyMembers = [
     specialization:
       "Contemporary literary theories, Contemporary British literature, Linguistics, English literature, English language Teaching, French, German",
     email: "vikasraval.cs@charusat.ac.in",
-    image: "/images/faculties/10. Dr Vikas Raval photo.jfif",
+    image: "/images/faculties/new/10. Dr Vikas Raval photo.webp",
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ const facultyMembers = [
     qualifications: "M.A., M.Phil., Phd (English Literature)",
     specialization: "Film Studies, Adaptation from Literature to Cinema",
     email: "hirenpatel.cs@charusat.ac.in",
-    image: "/images/faculties/11. Hirenkumar Dineshbhai_2107.JPG",
+    image: "/images/faculties/new/11. Hirenkumar Dineshbhai_2107.webp",
   },
   {
     id: 12,
@@ -140,7 +140,7 @@ const facultyMembers = [
     specialization:
       "Comparative Literary Studies, Cultural Identity and Indian Ethos in Literature, Indianness in Literature",
     email: "priyankapatel.cs@charusat.ac.in",
-    image: "/images/faculties/12. Priyanka Patel_2118.JPG",
+    image: "/images/faculties/new/12. Priyanka Patel_2118.webp",
   },
   {
     id: 13,
@@ -151,7 +151,7 @@ const facultyMembers = [
     specialization:
       "English Language Teaching, English Literature, Multimedia-based Education",
     email: "pradipzala.cs@charusat.ac.in",
-    image: "/images/faculties/13. Dr. Pradipsinh B Zala.png",
+    image: "/images/faculties/new/13. Dr. Pradipsinh B Zala.webp",
   },
   {
     id: 14,
@@ -161,7 +161,7 @@ const facultyMembers = [
     qualifications: "BCA, MCA",
     specialization: "",
     email: "",
-    image: "/images/faculties/14. Maharshi Traunbhai_707514..JPG",
+    image: "/images/faculties/new/14. Maharshi Traunbhai_707514..webp",
   },
   {
     id: 15,
@@ -205,7 +205,7 @@ export default function FacultyPage() {
               >
                 <div className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center pt-6">
-                    <div className="w-32 h-32 relative">
+                    <div className="w-32 h-32 relative ">
                       <Image
                         src={faculty.image || "/placeholder.svg"}
                         alt={faculty.name}
