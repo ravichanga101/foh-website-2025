@@ -229,9 +229,9 @@ const Header = () => {
                       height={40}
                       className="mr-2"
                     />
-                    <span className="text-lg font-bold text-foh-navy">
+                    {/* <span className="text-lg font-bold text-foh-navy">
                       CLASS
-                    </span>
+                    </span> */}
                   </Link>
                   {/* Removed redundant close button as SheetContent already provides one */}
                 </div>
