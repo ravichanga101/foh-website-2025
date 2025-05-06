@@ -125,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://charusat.edu.in/transcript/"
+                  href="https://charusat.edu.in:912/OthPaymentApp/"
                   target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
