@@ -55,7 +55,7 @@ const navigationItems: NavigationItem[] = [
       { title: "Syllabus", href: "#", id: "syllabus" },
       {
         title: "Transcripts",
-        href: "https://charusat.edu.in/transcript/",
+        href: "https://charusat.edu.in:912/OthPaymentApp/",
         target: "_blank",
         id: "transcripts",
       },
