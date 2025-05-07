@@ -258,9 +258,15 @@ const Header = () => {
                     />
                   ))}
                 </nav>
-                <Button variant="brown" className="mt-4">
-                  Apply Now
-                </Button>
+                <Link href="https://admission.charusat.ac.in" target="_blank" passHref>
+                  <Button
+                    variant="brown"
+                    className="mt-4 w-full" // Added w-full for better appearance
+                    onClick={() => setMobileMenuOpen(false)} // Close menu on click
+                  >
+                    Apply Now
+                  </Button>
+                </Link>
               </SheetContent>
             </Sheet>
           </div>
