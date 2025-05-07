@@ -33,7 +33,7 @@ const navigationItems: NavigationItem[] = [
   },
   {
     title: "Programs",
-    href: "./#programs",
+    href: "/#programs",
     subItems: [],
     id: "programs",
   },
@@ -116,7 +116,7 @@ const navigationItems: NavigationItem[] = [
   },
   {
     title: "Contact",
-    href: "./#contact",
+    href: "/#contact",
     subItems: [],
     id: "contact",
   },
