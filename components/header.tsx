@@ -52,7 +52,12 @@ const navigationItems: NavigationItem[] = [
       //   href: "#",
       //   id: "calendar",
       // },
-      { title: "Syllabus", href: "#", id: "syllabus" },
+      {
+        title: "Syllabus",
+        href: "./files/foh-syllabus.pdf",
+        target: "_blank",
+        id: "syllabus",
+      },
       {
         title: "Transcripts",
         href: "https://charusat.edu.in:912/OthPaymentApp/",

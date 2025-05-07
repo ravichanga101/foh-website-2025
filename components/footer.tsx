@@ -135,7 +135,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="https://www.charusat.ac.in/Downloads/Syllabus/"
+                  href="./files/foh-syllabus.pdf"
                   target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
