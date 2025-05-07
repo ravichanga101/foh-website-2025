@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Added for router.push
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 // Define types for navigation items
@@ -218,10 +219,13 @@ const Header = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent
+                forceMount
                 side="right"
-                className="w-[300px] sm:w-[400px] bg-foh-peach"
+                className="w-[300px] sm:w-[400px] bg-foh-peach p-6 pt-12 shadow-2xl"
+                onCloseAutoFocus={(e) => e.preventDefault()}
               >
-                <div className="flex items-center justify-between mb-6">
+                {/* Header within the Sheet */}
+                <div className="flex items-center justify-between mb-8">
                   <Link
                     href="/"
                     className="flex items-center"
@@ -234,12 +238,12 @@ const Header = () => {
                       height={40}
                       className="mr-2"
                     />
-                    {/* <span className="text-lg font-bold text-foh-navy">
-                      CLASS
-                    </span> */}
+                    {/* <span className=\"text-lg font-bold text-foh-navy\">CLASS</span> */}
                   </Link>
                   {/* Removed redundant close button as SheetContent already provides one */}
                 </div>
+
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
 
                 {/* Mobile Navigation */}
                 <nav className="flex flex-col space-y-1">
@@ -253,10 +257,10 @@ const Header = () => {
                       target={item.target}
                     />
                   ))}
-                  <Button variant="brown" className="mt-4">
-                    Apply Now
-                  </Button>
                 </nav>
+                <Button variant="brown" className="mt-4">
+                  Apply Now
+                </Button>
               </SheetContent>
             </Sheet>
           </div>
@@ -281,6 +285,7 @@ const MobileNavItem = ({
   target?: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter(); // Get router instance
 
   return (
     <div>
@@ -288,7 +293,25 @@ const MobileNavItem = ({
         <Link
           href={href}
           className="px-3 py-2 text-base font-medium text-foh-navy hover:text-foh-brown hover:bg-white/30 rounded-md w-full"
-          onClick={subItems.length === 0 ? onClick : undefined}
+          onClick={(e) => {
+            if (subItems.length > 0) {
+              // Item has sub-items: toggle submenu
+              if (href === "#") { // Prevent navigation for placeholder "#" links
+                e.preventDefault();
+              }
+              setIsOpen(!isOpen);
+            } else {
+              // Item has no sub-items: navigate and/or close main menu
+              const menuCloseClickHandler = onClick; // Renaming for clarity within this scope
+              if (href.startsWith("/#")) {
+                e.preventDefault();
+                router.push(href);
+                setTimeout(() => menuCloseClickHandler(), 50); // Minimal delay for router.push to process scroll before menu closes.
+              } else {
+                menuCloseClickHandler();
+              }
+            }
+          }}
           target={target}
         >
           {title}
@@ -313,7 +336,16 @@ const MobileNavItem = ({
               key={item.id}
               href={item.href}
               className="block px-3 py-2 text-sm text-foh-navy hover:text-foh-brown hover:bg-white/30 rounded-md"
-              onClick={onClick}
+              onClick={(e) => {
+          if (item.href.startsWith("/#")) {
+            e.preventDefault();
+            router.push(item.href);
+            // Adding a minimal delay to allow router to process before menu closes
+            setTimeout(() => onClick(), 50);
+          } else {
+            onClick(); // Close menu directly for external links or non-hash links
+          }
+        }}
               target={item.target}
             >
               {item.title}
