@@ -7,28 +7,30 @@ const facultyMembers = [
   {
     id: 1,
     name: "Dr. Bhaskar Pandya",
-    position: "Professor of English",
+    position: "Principal, CLASS",
     titles: [
-      "Head, Department of Humanities and Social Sciences",
+      "Professor",
       "Dean, Faculty of Humanities",
     ],
     qualifications: "Ph.D., M.Phil., M.A.",
     specialization:
       "English Studies, communication and Indian Knowledge System",
-    email: "dean.foh@charusat.ac.in",
+    email: "principal.class@charusat.ac.in, dean.foh@charusat.ac.in",
     image: "/images/faculties/new/1. Bhaskar_Sir.4b8d187e.webp",
   },
   {
     id: 2,
     name: "Dr. Kaushik Trivedi",
     position: "Assistant Professor",
-    titles: [],
+    titles: [
+      "Head, Department of Humanities and Social Sciences"
+    ],
     qualifications:
       "Ph.D. (ELT), M.Phil. (ELT), M.A. (English), B.Ed. (English & SS)",
     specialization:
       "English Language Teaching, Soft Skills, Personality Development, Professional Writing, Indian Knowledge System",
     email: "kaushiktrivedi.cs@charusat.ac.in",
-    image: "/images/faculties/new/2. Kaushik Rohitkumar Trivedi_2027.webp",
+    image: "/images/faculties/new/KT_Pic.jpg",
   },
   {
     id: 3,
@@ -77,11 +79,11 @@ const facultyMembers = [
   },
   {
     id: 7,
-    name: "Ms. Bharati Kaknani",
+    name: "Dr. Bharati Kaknani",
     position: "Assistant Professor",
     titles: [],
     qualifications:
-      "Ph.D. (Pursuing), B.Ed. (English), M.A. (English Literature)",
+      "Ph.D., B.Ed. (English), M.A. (English Literature)",
     specialization:
       "Gender representation in Indian epics, Communication skills and Soft skills.",
     email: "bharatikaknani.cs@charusat.ac.in",
@@ -92,7 +94,7 @@ const facultyMembers = [
     name: "Ms. Celine Davla",
     position: "Assistant Professor",
     titles: [],
-    qualifications: "M.A. in English Literature, B. Ed (Advanced)",
+    qualifications: "Ph. D.(Pursuing), M.A. in English Literature, B. Ed (Advanced)",
     specialization:
       "Performing Arts, Strategies for developing spoken fluency and expression, Symbolism and narrative techniques in film",
     email: "celinedavla.cs@charusat.ac.in",
@@ -100,14 +102,14 @@ const facultyMembers = [
   },
   {
     id: 9,
-    name: "Ms. Pranjal Bhatt",
+    name: "Ms. Nishi Purohit",
     position: "Assistant Professor",
     titles: [],
-    qualifications: "Ph.D. (Pursuing), M.A. English, B.A. English",
+    qualifications: " M.A. English, B.A. English",
     specialization:
-      "Gender Studies, Cultural Studies, Graphic Literature, Digital & Environmental Humanities, English Language and Linguistics",
-    email: "pranjalbhatt.cs@charusat.ac.in",
-    image: "/images/faculties/new/9. Pranjal paritosh_2094.webp",
+      "Competitive Literature, Adatation of Literature into Cienema, Spoken English, Dance and Performing Arts",
+    email: "nishipurohit.cs@charusat.ac.in",
+    image: "/images/faculties/new/9. Nishi Purohit_2094.webp",
   },
   {
     id: 10,
@@ -168,7 +170,7 @@ const facultyMembers = [
     name: "Mr. Jeet Patel",
     position: "Office Attendant",
     titles: [],
-    qualifications: "10th Pass",
+    qualifications: "BA (Pursuing)",
     specialization: "",
     email: "",
     image: "/placeholder.svg?height=300&width=300",
