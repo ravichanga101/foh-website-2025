@@ -47,7 +47,7 @@ export function BestPractices() {
                 className="mt-4 text-foh-navy hover:text-foh-green"
               >
                 <Link
-                  href="/files/A master report on Liberal Arts - 2023-24.pdf"
+                  href="/files/A_master_report_on_Liberal_Arts_2024-25.pdf"
                   target="_blank"
                 >
                   <FileText className="h-4 w-4 mr-2" />
@@ -86,7 +86,7 @@ export function BestPractices() {
                 className="mt-4 text-foh-brown hover:text-foh-green"
               >
                 <Link
-                  href="/files/A master report on CPI - 2023-24.pdf"
+                  href="/files/A_master_report_on_CPI_2024-25.pdf"
                   target="_blank"
                 >
                   <FileText className="h-4 w-4 mr-2" />

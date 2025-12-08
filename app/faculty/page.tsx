@@ -98,7 +98,7 @@ const facultyMembers = [
     specialization:
       "Performing Arts, Strategies for developing spoken fluency and expression, Symbolism and narrative techniques in film",
     email: "celinedavla.cs@charusat.ac.in",
-    image: "/images/faculties/new/8. Celine Manu Davla_2090.webp",
+    image: "/images/faculties/new/Celine_Pic.jpg",
   },
   {
     id: 9,

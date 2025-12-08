@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex flex-col items-start space-y-4 mb-6">
               <Image
-                src="/images/logos/class-logo.png"
+                src="/images/logos/class_logo.jpg"
                 alt="CLASS Logo"
                 width={150}
                 height={50}
@@ -37,7 +37,7 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/IIIM.CHARUSAT/"
+                href="https://www.facebook.com/people/Charotar-Institute-of-Languages-Arts-and-Social-Studies-CLASS-Charusat/61583945134868/#"
                 className="text-foh-beige hover:text-white"
               >
                 <Facebook className="h-5 w-5" />
@@ -45,26 +45,26 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://www.instagram.com/iiim.charusat/"
+                href=" https://www.instagram.com/class.charusat?igsh=OHJubjV5aWJkOGZk"
                 className="text-foh-beige hover:text-white"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="https://www.linkedin.com/school/iiim-charusat/"
+                href="https://www.linkedin.com/in/class-charusat-2012ba398/"
                 className="text-foh-beige hover:text-white"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.youtube.com/@iiimcharusat"
                 className="text-foh-beige hover:text-white"
               >
                 <Youtube className="h-5 w-5" />
                 <span className="sr-only">YouTube</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -106,6 +106,15 @@ export default function Footer() {
                   Faculty
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/files/NOTIFICATION.pdf"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  Approval Letter
+                </Link>
+              </li>
+              
             </ul>
           </div>
 
@@ -134,12 +143,20 @@ export default function Footer() {
               </li>
 
               <li>
+                Syllabus - &nbsp; 
                 <Link
-                  href="./files/foh-syllabus.pdf"
+                  href="/files/BA English syllabus.pdf"
                   target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
-                  Syllabus
+                  BA
+                </Link>&nbsp;|&nbsp;
+                <Link
+                  href="/files/BLIS syllabus.pdf"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  BLIS
                 </Link>
               </li>
               <li>
@@ -168,12 +185,12 @@ export default function Footer() {
               <li className="flex">
                 <Phone className="h-5 w-5 text-foh-beige mr-2 flex-shrink-0" />
                 <span className="text-gray-300">
-                  +91-9824269101 / Ext. 5184
+                  +91-9265620055 / Ext. 2697-26(5134)
                 </span>
               </li>
               <li className="flex">
                 <Mail className="h-5 w-5 text-foh-beige mr-2 flex-shrink-0" />
-                <span className="text-gray-300">dean.foh@charusat.ac.in</span>
+                <span className="text-gray-300">hod.hss@charusat.ac.in</span>
               </li>
             </ul>
           </div>

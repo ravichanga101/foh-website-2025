@@ -10,7 +10,7 @@ export function ProgramsSection() {
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Academic Programs"
-          subtitle="FoH offers Ph.D., B.A. English, and B.LIS programs that nurture intellect, values, and communication for impactful careers and research"
+          subtitle="CLASS offers offers PhD, Bachelor of Arts (BA) in English, Bachelor of Library & Information Science, Master of Arts (MA) in English, and Master of Library & Information Science (MLIS) programs that nurture intellect, values, and communication for impactful careers and research"
           theme="secondary"
           icon={<BookOpen className="h-6 w-6 text-foh-navy" />}
         />
@@ -27,7 +27,7 @@ export function ProgramsSection() {
                 </h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Ph.D. Program in English, Communication and Library Science
+                Ph.D. Program in English, Communication, Indian Knowledge System, Cultural Studies, Translation Studies, Linguistic, ELT, Library and Information Science
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -89,6 +89,66 @@ export function ProgramsSection() {
                 </span>
                 <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                   ₹ 30000 / Year
+                </span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-t-4 border-t-foh-navy shadow-lg">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-foh-peach p-2 rounded-full">
+                  <BookOpen className="h-5 w-5 text-foh-navy" />
+                </div>
+                <h3 className="text-lg font-bold text-foh-navy">
+                  Master of Arts (MA)
+                </h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Master of Arts (MA) in English
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  2 Years
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  UGC approved
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  ₹ 50000 / Year
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  Graduation in BA English
+                </span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-t-4 border-t-foh-brown shadow-lg">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-foh-peach p-2 rounded-full">
+                  <BookOpen className="h-5 w-5 text-foh-brown" />
+                </div>
+                <h3 className="text-lg font-bold text-foh-navy">
+                  Master of Library & Information System
+                </h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Master of Library and Information System (MLIS)
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  1 Years
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  UGC approved
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  ₹ 40000 / Year
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  Graduation in BLIS
                 </span>
               </div>
             </CardContent>
