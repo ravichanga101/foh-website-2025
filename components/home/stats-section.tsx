@@ -12,7 +12,7 @@ export function StatsSection() {
             <p className="text-gray-700">Years of Excellence</p>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-md text-center">
-            <p className="text-4xl font-bold text-foh-beige mb-2">3</p>
+            <p className="text-4xl font-bold text-foh-beige mb-2">5</p>
             <p className="text-gray-700">Programs offered</p>
           </div>
         </div>
