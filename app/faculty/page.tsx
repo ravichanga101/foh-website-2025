@@ -7,10 +7,10 @@ const facultyMembers = [
   {
     id: 1,
     name: "Dr. Bhaskar Pandya",
-    position: "Principal, CLASS",
+    position: "Professor",
     titles: [
-      "Professor",
       "Dean, Faculty of Humanities",
+      "Principal, CLASS",
     ],
     qualifications: "Ph.D., M.Phil., M.A.",
     specialization:
@@ -30,10 +30,24 @@ const facultyMembers = [
     specialization:
       "English Language Teaching, Soft Skills, Personality Development, Professional Writing, Indian Knowledge System",
     email: "kaushiktrivedi.cs@charusat.ac.in",
-    image: "/images/faculties/new/KT_Pic.jpg",
+    image: "/images/faculties/Kaushik_sir.png",
   },
   {
     id: 3,
+    name: "Dr. Pramod Patel",
+    position: "",
+    titles: [
+      "Head, Department of Library and Information Science"
+    ],
+    qualifications:
+      "Ph.D., M.Phil., MLIS, BLIS, B.A.",
+    specialization:
+      "Library and Information Science",
+    email: "head.lib@charusat.ac.in",
+    image: "/images/faculties/Dr._Pramod_Patel.jpg",
+  },
+  {
+    id: 4,
     name: "Dr. Robert Parmar",
     position: "Assistant Professor",
     titles: [],
@@ -45,7 +59,7 @@ const facultyMembers = [
     image: "/images/faculties/new/3. Robert Joseph_7029.webp",
   },
   {
-    id: 4,
+    id: 5,
     name: "Dr. Vijay Makwana",
     position: "Assistant Professor",
     titles: [],
@@ -56,29 +70,29 @@ const facultyMembers = [
     image: "/images/faculties/new/4. Vijay Mahendrabhai Makwana_2062.webp",
   },
   {
-    id: 5,
+    id: 6,
     name: "Dr. Kinjal Bhatia",
     position: "Assistant Professor",
     titles: [],
-    qualifications: "M.A. (English), M.Phil. (Literature), Ph.D.",
+    qualifications: "Ph.D., M.Phil. (Literature), M.A. (English)",
     specialization:
       "Psychoanalytic Criticism, Translation Studies, Comparative Literature, Feminist and Gender Studies, Evolution of the Short Story in World Literature",
     email: "kinjalbhatia.cs@charusat.ac.in",
     image: "/images/faculties/new/5. Kinjal Bhatia_2114.webp",
   },
   {
-    id: 6,
-    name: "Ms. Jayshree Mehta",
+    id: 7,
+    name: "Dr. Jayshree Mehta",
     position: "Assistant Professor",
     titles: [],
-    qualifications: "M.A. B.ED. Ph.D. (Pursuing)",
+    qualifications: "Ph.D., M.A., B.Ed., B.A.(English), B.A.(Psychology)",
     specialization:
       "English Literature (Novel, Drama and Poetry), Educational and Social Psychology",
     email: "jayshreemehta.cs@charusat.ac.in",
     image: "/images/faculties/new/6. Jayshree Chirag Mehta_2088.webp",
   },
   {
-    id: 7,
+    id: 8,
     name: "Dr. Bharati Kaknani",
     position: "Assistant Professor",
     titles: [],
@@ -90,7 +104,7 @@ const facultyMembers = [
     image: "/images/faculties/new/7. Bharati Harishkumar_2089.webp",
   },
   {
-    id: 8,
+    id: 9,
     name: "Ms. Celine Davla",
     position: "Assistant Professor",
     titles: [],
@@ -101,40 +115,40 @@ const facultyMembers = [
     image: "/images/faculties/new/Celine_Pic.jpg",
   },
   {
-    id: 9,
+    id: 10,
     name: "Ms. Nishi Purohit",
     position: "Assistant Professor",
     titles: [],
-    qualifications: " M.A. English, B.A. English",
+    qualifications: " M.A.(English), B.A.(English)",
     specialization:
       "Competitive Literature, Adatation of Literature into Cienema, Spoken English, Dance and Performing Arts",
     email: "nishipurohit.cs@charusat.ac.in",
-    image: "/images/faculties/new/9. Nishi Purohit_2094.webp",
+    image: "/images/faculties/Nishi_mam.jpg",
   },
   {
-    id: 10,
+    id: 11,
     name: "Dr. Vikas Raval",
     position: "Assistant Professor",
     titles: [],
     qualifications:
-      "M.A (English literature), M.A (English language and linguistics), M.Phil, B.Ed, Ph.D",
+      "Ph. D., M.Phil, B.Ed., M.A (English literature), M.A (English language and linguistics)",
     specialization:
       "Contemporary literary theories, Contemporary British literature, Linguistics, English literature, English language Teaching, French, German",
     email: "vikasraval.cs@charusat.ac.in",
     image: "/images/faculties/new/10. Dr Vikas Raval photo.webp",
   },
   {
-    id: 11,
+    id: 12,
     name: "Dr. Hirenkumar Patel",
     position: "Assistant Professor",
     titles: [],
-    qualifications: "M.A., M.Phil., Phd (English Literature)",
+    qualifications: "Phd (English Literature), M.Phil., M.A.",
     specialization: "Film Studies, Adaptation from Literature to Cinema",
     email: "hirenpatel.cs@charusat.ac.in",
     image: "/images/faculties/new/11. Hirenkumar Dineshbhai_2107.webp",
   },
   {
-    id: 12,
+    id: 13,
     name: "Ms. Priyanka Patel",
     position: "Assistant Professor",
     titles: [],
@@ -145,7 +159,7 @@ const facultyMembers = [
     image: "/images/faculties/new/12. Priyanka Patel_2118.webp",
   },
   {
-    id: 13,
+    id: 14,
     name: "Dr. Pradipsinh Zala",
     position: "Assistant Professor",
     titles: [],
@@ -156,7 +170,7 @@ const facultyMembers = [
     image: "/images/faculties/new/13. Dr. Pradipsinh B Zala.webp",
   },
   {
-    id: 14,
+    id: 15,
     name: "Mr. Maharshi Patel",
     position: "Office Assistant",
     titles: [],
@@ -166,7 +180,7 @@ const facultyMembers = [
     image: "/images/faculties/new/14. Maharshi Traunbhai_707514..webp",
   },
   {
-    id: 15,
+    id: 16,
     name: "Mr. Jeet Patel",
     position: "Office Attendant",
     titles: [],
@@ -207,7 +221,7 @@ export default function FacultyPage() {
               >
                 <div className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center pt-6">
-                    <div className="w-32 h-32 relative ">
+                    <div className="w-48 h-48 relative ">
                       <Image
                         src={faculty.image || "/placeholder.svg"}
                         alt={faculty.name}

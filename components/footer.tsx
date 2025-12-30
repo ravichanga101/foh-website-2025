@@ -157,6 +157,20 @@ export default function Footer() {
                   className="text-gray-300 hover:text-foh-peach"
                 >
                   BLIS
+                </Link>&nbsp;|&nbsp;
+                <Link
+                  href="/files/MA_English_Liberal_Arts_Programme_Structure.pdf"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  MA
+                </Link>&nbsp;|&nbsp;
+                <Link
+                  href="/files/MLIS_Programme_Structure.pdf"
+                  target="_blank"
+                  className="text-gray-300 hover:text-foh-peach"
+                >
+                  MLIS
                 </Link>
               </li>
               <li>
