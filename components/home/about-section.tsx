@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -6,8 +7,50 @@ import { SectionTitle } from "@/components/section-title";
 
 export function AboutSection() {
   return (
+
     <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4">
+        {/* Marquee Banner */}
+        <div className="mb-8 bg-gradient-to-r from-foh-brown/10 to-foh-brown/5 rounded-lg overflow-hidden border-l-4 border-foh-brown">
+          <Link href="files/One-Day-International-Conference-CLASS.pdf" target="_blank">
+            <div className="relative py-3 px-4 group cursor-pointer hover:bg-foh-brown/5 transition-colors">
+              <style jsx>{`
+                @keyframes scroll {
+                  0% {
+                    transform: translateX(100%);
+                  }
+                  100% {
+                    transform: translateX(-100%);
+                  }
+                }
+                .marquee-text {
+                  animation: scroll 15s linear infinite;
+                  white-space: nowrap;
+                }
+                .marquee-container:hover .marquee-text {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="marquee-container overflow-hidden">
+                <div className="marquee-text text-foh-brown font-semibold text-lg flex items-center gap-2">
+                  <span className="mx-8">•</span>
+                  <span>📢</span>
+                  <span>International Conference at CLASS-CHARUSAT on February 7, 2026 - Click Here</span>
+                  <span className="mx-8">•</span>
+                  <span>📢</span>
+                  <span>International Conference at CLASS-CHARUSAT on February 7, 2026 - Click Here</span>
+                  <span className="mx-8">•</span>
+                  <span>📢</span>
+                  <span>International Conference at CLASS-CHARUSAT on February 7, 2026 - Click Here</span>
+                  <span className="mx-8">•</span>
+                  <span>📢</span>
+                  <span>International Conference at CLASS-CHARUSAT on February 7, 2026 - Click Here</span>
+                  <span className="mx-8">•</span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
         <SectionTitle
           title="About Charotar Institute of Languages, Arts and Social Studies (CLASS)"
           subtitle="Nurturing well-rounded individuals through academic excellence and human values"
