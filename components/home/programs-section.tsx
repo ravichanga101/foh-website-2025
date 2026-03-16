@@ -63,6 +63,9 @@ export function ProgramsSection() {
                 <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                   ₹ 40000 / Year
                 </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  12th Pass/Pursuing students in CBSE/ICSE/NIOS/State Board or any other valid board with any stream(With English as a subject)
+                </span>
               </div>
             </CardContent>
           </Card>
@@ -89,6 +92,9 @@ export function ProgramsSection() {
                 </span>
                 <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                   ₹ 30000 / Year
+                </span>
+                <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  Graduate in any discipline
                 </span>
               </div>
             </CardContent>
