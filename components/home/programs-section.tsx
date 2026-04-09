@@ -137,7 +137,7 @@ export function ProgramsSection() {
                   <BookOpen className="h-5 w-5 text-foh-brown" />
                 </div>
                 <h3 className="text-lg font-bold text-foh-navy">
-                  Master of Library & Information System
+                  Master of Library & Information Science
                 </h3>
               </div>
               <p className="text-gray-700 mb-4">
