@@ -61,13 +61,13 @@ const navigationItems: NavigationItem[] = [
       },
       {
         title: "Transcripts",
-        href: "https://charusat.edu.in:912/OthPaymentApp/",
+        href: "https://support.charusat.edu.in/transcript/",
         target: "_blank",
         id: "transcripts",
       },
       {
         title: "E-Governance",
-        href: "https://charusat.edu.in:912/eGovernance/",
+        href: "https://support.charusat.edu.in/egov/",
         target: "_blank",
         id: "e-governance",
       },
