@@ -125,7 +125,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="https://charusat.edu.in:912/eGovernance/"
+                  href="https://support.charusat.edu.in/egov/"
                   target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
@@ -134,7 +134,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://charusat.edu.in:912/OthPaymentApp/"
+                  href="https://support.charusat.edu.in/FeesPaymentApp/"
                   target="_blank"
                   className="text-gray-300 hover:text-foh-peach"
                 >
