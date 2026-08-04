@@ -78,6 +78,12 @@ const navigationItems: NavigationItem[] = [
         id: "pay-fees",
       },
       {
+        title: "Student Handbook",
+        href: "https://drive.google.com/file/d/1CnAhp81r3KBf2uFE_UqAYghsrF10HSZC/view?usp=sharing",
+        target: "_blank",
+        id: "Student Handbook",
+      },
+      {
         title: "Downloads",
         href: "https://www.charusat.ac.in/Downloads/",
         target: "_blank",
