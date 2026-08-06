@@ -79,10 +79,18 @@ const navigationItems: NavigationItem[] = [
       },
       {
         title: "Student Handbook",
-        href: "https://drive.google.com/file/d/1CnAhp81r3KBf2uFE_UqAYghsrF10HSZC/view?usp=sharing",
+        href: "https://drive.google.com/drive/folders/1mLZ7szGge_Wmw4_kct-xD53PxJRHua0y?usp=sharing",
+        //href: "https://drive.google.com/file/d/1CnAhp81r3KBf2uFE_UqAYghsrF10HSZC/view?usp=sharing",
         target: "_blank",
         id: "Student Handbook",
       },
+      // {
+      //   title: "Student Handbook-II",
+      //   href: "https://drive.google.com/file/d/1yBilXDc-iR6CWtprb8Sk5qNLhzRTq5Lx/view?usp=sharing",
+      //   target: "_blank",
+      //   id: "Student Handbook",
+      // },
+      
       {
         title: "Downloads",
         href: "https://www.charusat.ac.in/Downloads/",
