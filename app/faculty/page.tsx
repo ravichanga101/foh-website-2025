@@ -116,29 +116,6 @@ const facultyMembers = [
   },
   {
     id: 10,
-    name: "Ms. Nishi Purohit",
-    position: "Assistant Professor",
-    titles: [],
-    qualifications: " M.A.(English), B.A.(English)",
-    specialization:
-      "Competitive Literature, Adatation of Literature into Cienema, Spoken English, Dance and Performing Arts",
-    email: "nishipurohit.cs@charusat.ac.in",
-    image: "/images/faculties/Nishi_mam.jpg",
-  },
-  {
-    id: 11,
-    name: "Dr. Vikas Raval",
-    position: "Assistant Professor",
-    titles: [],
-    qualifications:
-      "Ph. D., M.Phil, B.Ed., M.A (English literature), M.A (English language and linguistics)",
-    specialization:
-      "Contemporary literary theories, Contemporary British literature, Linguistics, English literature, English language Teaching, French, German",
-    email: "vikasraval.cs@charusat.ac.in",
-    image: "/images/faculties/new/10. Dr Vikas Raval photo.webp",
-  },
-  {
-    id: 12,
     name: "Dr. Hirenkumar Patel",
     position: "Assistant Professor",
     titles: [],
@@ -148,7 +125,7 @@ const facultyMembers = [
     image: "/images/faculties/new/11. Hirenkumar Dineshbhai_2107.webp",
   },
   {
-    id: 13,
+    id: 11,
     name: "Ms. Priyanka Patel",
     position: "Assistant Professor",
     titles: [],
@@ -159,7 +136,7 @@ const facultyMembers = [
     image: "/images/faculties/new/12. Priyanka Patel_2118.webp",
   },
   {
-    id: 14,
+    id: 12,
     name: "Dr. Pradipsinh Zala",
     position: "Assistant Professor",
     titles: [],
@@ -170,7 +147,7 @@ const facultyMembers = [
     image: "/images/faculties/new/13. Dr. Pradipsinh B Zala.webp",
   },
   {
-    id: 15,
+    id: 13,
     name: "Mr. Maharshi Patel",
     position: "Office Assistant",
     titles: [],
@@ -180,7 +157,7 @@ const facultyMembers = [
     image: "/images/faculties/new/14. Maharshi Traunbhai_707514..webp",
   },
   {
-    id: 16,
+    id: 14,
     name: "Mr. Jeet Patel",
     position: "Office Attendant",
     titles: [],
@@ -188,6 +165,50 @@ const facultyMembers = [
     specialization: "",
     email: "",
     image: "/placeholder.svg?height=300&width=300",
+  },
+  {
+    id: 15,
+    name: "Pratham Pareshbhai Patel",
+    position: "Assistant Professor",
+    titles: [],
+    qualifications: "M.A., NET, GSET, Ph.D. (Pursuing)",
+    specialization:
+      "Folk Literature, Translation Studies, Cultural Studies, Linguistics, Indian Writing in English, Communication and Soft Skills",
+    email: "prathampatel.cs@charusat.ac.in",
+    image: "/images/faculties/new/15. Pratham Pareshbhai Patel_2119.webp",
+  },
+  {
+    id: 16,
+    name: "Shane Happy Desai",
+    position: "Assistant Professor",
+    titles: [],
+    qualifications: "M.A. (Gold Medalist), GSET, Ph.D. (Pursuing)",
+    specialization:
+      "World Literature, Literary Theory, Contemporary Literature, Cinematic Adaptation, Graphic Narratives, Communication and Soft Skills",
+    email: "shanedesai.cs@charusat.ac.in",
+    image: "/images/faculties/new/16. Shane Happy Desai_2120.webp",
+  },
+  {
+    id: 17,
+    name: "Thaker Vrunda Hiteshbhai",
+    position: "Assistant Professor",
+    titles: [],
+    qualifications: "Ph.D. (Pursuing), M.A., B.A.",
+    specialization:
+      "English Language Teaching, Indian English Literature, Cultural Studies, Comparative Literary Studies",
+    email: "vrundathaker.cs@charusat.ac.in",
+    image: "/images/faculties/new/17. Thaker Vrunda Hiteshbhai_2121.webp",
+  },
+  {
+    id: 18,
+    name: "Ms. Khatri Galiyara Sifa",
+    position: "Assistant Professor",
+    titles: [],
+    qualifications: "M.A. in English, B.A. (Hons.) in English",
+    specialization:
+      "Contemporary Literature, Decolonial Theory, Fandom Studies",
+    email: "sifakhatri.cs@charusat.ac.in",
+    image: "/images/faculties/new/18. Khatri Galiyara Sifa_2122.webp",
   },
 ];
 
